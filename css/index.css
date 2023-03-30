@@ -87,16 +87,35 @@ h1{
 #discount{
 	filter: invert(1);
 }
-
+.graph{
+	max-width: 100%;
+	height: auto;
+	display: flex;
+	padding: 5%;
+	align-content: center;
+	justify-content: center;
+}
+/*
+	Configuraciones para PC/Desktop: (+768px)
+*/
 @media (min-width: 768px){
 	.section{
-		flex-flow: row nowrap;
+		max-width: 100%;
+		height: auto;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		align-content: center;
+		justify-content: center;
 	}
 	.title{
 		max-width: 100%;
 		height: auto;
 		padding: 5%;
 		font-size: 1.5em;
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: space-evenly;
 	}
 	.header{
 		flex-flow: row nowrap;
