@@ -98,7 +98,7 @@ h1{
 /*
 	Configuraciones para PC/Desktop: (+768px)
 */
-@media (min-width: 768px, orientation: landscape){
+@media (min-width: 768px), (orientation: landscape){
 	.section{
 		max-width: 100%;
 		height: auto;
