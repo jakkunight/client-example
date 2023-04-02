@@ -18,10 +18,12 @@
 */
 body{
 	margin: 0px;
-	background-color: #000000;
+	width: 100%;
+	height: auto;
+	font-size: 5vw;
 	color: #cccccc;
-	font-size: 100%;
-	font-family: 'VT323', monospace;
+	font-family: "VT323", "Courrier New", monospace;
+	overflow-wrap: break-word;
 }
 img{
 	max-width: 100%;
@@ -29,116 +31,156 @@ img{
 }
 img:hover{
 	filter: contrast(1.75);
+	filter: brightness(1.75);
 }
-h1{
-	color: #ffffff;
+.spacer{
+    aspect-ratio: 900/450;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
-/*
-	Configuraciones para móvil:
-*/
-.display{
+.layer1{
+    background-image: url("../img/Wavy-border.svg");
+}
+.layer-top{
+    background-image: url("../img/layered-waves-top.svg");
+}
+.layer-bottom{
+    background-image: url("../img/layered-waves-bottom.svg");
+}
+.logo-img{
+	width: 100%;
 	max-width: 100%;
 	height: auto;
+	aspect-ratio: 1/1;
 	display: flex;
-	flex-flow: row wrap;
 	justify-content: center;
 	align-content: center;
+	justify-items: center;
+	align-items: center;
+	text-align: center;
 }
-.header{
+.logo-grid{
+	background-color: black;
+	width: 100%;
+	flex: 1;
+	aspect-ratio: 1/1;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	align-content: center;
+	justify-content: center;
+	gap: 10pt 10pt;
+	margin: 10pt;
+	padding: 10pt;
+}
+.heading-paragraph{
+	flex: 1;
 	max-width: 100%;
 	height: auto;
-	padding: 5%;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	margin: 10pt;
+	padding: 10pt;
+}
+.main-banner{
+	background-color: black;
+	width: 100%;
+	height: 50%;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-evenly;
+	align-content: space-evenly;
+}
+.banner{
+	background-color: #0066ff;
+	width: 100%;
+	height: fit-content;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-evenly;
 	align-content: space-evenly;
-	background-image: linear-gradient(210deg, #051485, #2f6deb, #051485, #980acc, #051485);
-	background-color: #000000;
-	background-repeat: no-repeat;
-	background-size: contain;
 }
-.title{
-	max-width: 100%;
-	height: auto;
-	padding: 5%;
-	font-size: 1.5em;
+.bg-black{
+	background-color: black;
 }
-.graphic{
-	max-width: 100%;
-	height: auto;
-	display: grid;
-	grid-template-columns: 20% 20% 20%;
-	grid-template-rows: 20% 20% 20%;
-	justify-content: space-evenly;
-	align-content: space-evenly;
-}
-.section-reverse{
-	font-size: 1.5em;
-	padding: 5%;
-	max-width: 100%;
-	height: auto;
+.banner-reverse{
+	width: 100%;
+	height: fit-content;
 	display: flex;
 	flex-flow: row-reverse wrap;
-}
-.section{
-	font-size: 1.5em;
-	padding: 5%;
-	max-width: 100%;
-	height: auto;
-	display: flex;
-	flex-flow: row wrap;
-}
-#discount{
-	filter: invert(1);
-}
-.graph{
-	max-width: 100%;
-	height: auto;
-	display: flex;
-	padding: 5%;
-	align-content: center;
-	justify-content: center;
+	justify-content: space-evenly;
+	align-content: space-evenly;
 }
 /*
 	Configuraciones para PC/Desktop: (+768px)
 */
 @media (min-width: 768px), (orientation: landscape){
-	.section{
-		font-size: 1.5em;
-		padding: 5%;
-		max-width: 100%;
+	body{
+		margin: 0px;
+		width: 100%;
 		height: auto;
-		display: flex;
-		flex-flow: row nowrap;
+		font-size: 2vw;
+		color: #cccccc;
+		font-family: "VT323", "Courrier New", monospace;
+		overflow-wrap: break-word;
 	}
-	.section-reverse{
-		font-size: 1.5em;
-		padding: 5%;
+	.logo-img{
+		width: 100%;
 		max-width: 100%;
 		height: auto;
+		aspect-ratio: 1/1;
 		display: flex;
-		flex-flow: row-reverse nowrap;
-	}
-	.title{
-		max-width: 100%;
-		height: auto;
-		padding: 5%;
-		font-size: 1.5em;
-		display: flex;
-		flex-wrap: wrap;
+		justify-content: center;
 		align-content: center;
-		justify-content: space-evenly;
+		justify-items: center;
+		align-items: center;
+		text-align: center;
+		padding: 10pt;
 	}
-	.header{
+	.main-banner{
+		background-color: black;
+		width: 100%;
+		height: 50%;
+		display: flex;
 		flex-flow: row nowrap;
-	}
-	.graphic{
-		max-width: 100%;
-		height: auto;
-		display: grid;
-		grid-template-columns: 20% 20% 20%;
-		grid-template-rows: 20% 20% 20%;
 		justify-content: space-evenly;
 		align-content: space-evenly;
+	}
+	.banner{
+		background-color: #0066ff;
+		width: 100%;
+		height: fit-content;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		justify-content: space-evenly;
+		align-content: space-evenly;
+	}
+	.banner-reverse{
+		width: 100%;
+		height: fit-content;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		justify-content: space-evenly;
+		align-content: space-evenly;
+	}
+	.banner-reverse.logo-img{
+		order: 1;
+	}
+	.banner-reverse.heading-paragraph{
+		order: 2;
+	}
+	.heading-paragraph{
+		width: 100%;
+		height: auto;
+		flex-wrap: nowrap;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		margin: 10pt;
+		padding: 10pt;
 	}
 }
